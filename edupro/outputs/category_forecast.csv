@@ -1,0 +1,9 @@
+CourseCategory,Courses,ActualRevenue,PredictedRevenue,ActualEnrollments,PredictedEnrollments,RevenueError,RevenueErrorPct
+Artificial Intelligence,3,117334.07,124605.87,469,500.18999999999994,7271.799999999988,6.2
+Programming,1,77453.92,54735.19,164,166.73,-22718.729999999996,-29.33
+Cybersecurity,1,59139.0,47177.72,150,166.73,-11961.279999999999,-20.23
+Design,1,43113.72,44543.92,156,166.73,1430.199999999997,3.32
+Web Development,2,16682.15,10354.69,349,333.46,-6327.460000000001,-37.93
+Business,2,0.0,0.0,341,333.46,0.0,
+Digital Marketing,1,0.0,0.0,194,166.73,0.0,
+Project Management,1,0.0,0.0,153,166.73,0.0,

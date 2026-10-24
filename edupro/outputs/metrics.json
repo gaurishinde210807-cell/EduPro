@@ -1,0 +1,3004 @@
+{
+  "generated_at": "2026-10-24T13:05:51.169622",
+  "data_quality": {
+    "workbook": "/home/claude/edupro/data/EduPro Online Platform.xlsx",
+    "sheets_found": [
+      "Users",
+      "Teachers",
+      "Courses",
+      "Transactions"
+    ],
+    "column_mapping": {
+      "users": {
+        "sheet": "Users",
+        "resolved": {
+          "UserID": "UserID",
+          "UserName": "UserName",
+          "Age": "Age",
+          "Gender": "Gender",
+          "Email": "Email"
+        }
+      },
+      "teachers": {
+        "sheet": "Teachers",
+        "resolved": {
+          "TeacherID": "TeacherID",
+          "TeacherName": "TeacherName",
+          "Expertise": "Expertise",
+          "YearsOfExperience": "YearsOfExperience",
+          "TeacherRating": "TeacherRating"
+        }
+      },
+      "courses": {
+        "sheet": "Courses",
+        "resolved": {
+          "CourseID": "CourseID",
+          "CourseName": "CourseName",
+          "CourseCategory": "CourseCategory",
+          "CourseType": "CourseType",
+          "CourseLevel": "CourseLevel",
+          "CoursePrice": "CoursePrice",
+          "CourseDuration": "CourseDuration",
+          "CourseRating": "CourseRating"
+        }
+      },
+      "transactions": {
+        "sheet": "Transactions",
+        "resolved": {
+          "TransactionID": "TransactionID",
+          "CourseID": "CourseID",
+          "UserID": "UserID",
+          "TransactionDate": "TransactionDate",
+          "Amount": "Amount"
+        }
+      }
+    },
+    "raw_shapes": {
+      "courses": [
+        60,
+        8
+      ],
+      "teachers": [
+        60,
+        7
+      ],
+      "transactions": [
+        10000,
+        7
+      ],
+      "users": [
+        3000,
+        5
+      ]
+    },
+    "duplicates_dropped": {
+      "courses": 0,
+      "teachers": 0,
+      "transactions": 0
+    },
+    "transactions_dropped_missing_key": 0,
+    "orphan_transactions": 0,
+    "orphan_transaction_pct": 0.0,
+    "missing_pct": {
+      "courses": {
+        "CourseID": 0.0,
+        "CourseName": 0.0,
+        "CourseCategory": 0.0,
+        "CourseType": 0.0,
+        "CourseLevel": 0.0,
+        "CoursePrice": 0.0,
+        "CourseDuration": 0.0,
+        "CourseRating": 0.0
+      },
+      "teachers": {
+        "TeacherID": 0.0,
+        "TeacherName": 0.0,
+        "Age": 0.0,
+        "Gender": 0.0,
+        "Expertise": 0.0,
+        "YearsOfExperience": 0.0,
+        "TeacherRating": 0.0
+      },
+      "transactions": {
+        "TransactionID": 0.0,
+        "UserID": 0.0,
+        "CourseID": 0.0,
+        "TransactionDate": 0.0,
+        "Amount": 0.0,
+        "PaymentMethod": 0.0,
+        "TeacherID": 0.0
+      }
+    },
+    "date_range": {
+      "min": "2025-01-01",
+      "max": "2025-12-30"
+    },
+    "teacher_link": {
+      "link_source": "transactions",
+      "teachers_per_course_median": 14.0,
+      "teachers_per_course_max": 30,
+      "teacher_rating_sd_raw": 0.95,
+      "teacher_rating_sd_aggregated": 0.142,
+      "variation_retained_pct": 14.9,
+      "usable": false
+    }
+  },
+  "eda": {
+    "enrollments": {
+      "mean": 166.67,
+      "median": 166.0,
+      "std": 12.52,
+      "min": 140,
+      "max": 196,
+      "skew": 0.157,
+      "zero_enrolment_courses": 0
+    },
+    "revenue": {
+      "total": 911323.47,
+      "mean": 15188.72,
+      "median": 0.0,
+      "std": 25409.72,
+      "skew": 1.504,
+      "top_decile_share_pct": 47.4
+    },
+    "categories": [
+      {
+        "CourseCategory": "Artificial Intelligence",
+        "Courses": 5,
+        "Enrollments": 829,
+        "Revenue": 202750.66999999998
+      },
+      {
+        "CourseCategory": "Business",
+        "Courses": 5,
+        "Enrollments": 833,
+        "Revenue": 181527.58
+      },
+      {
+        "CourseCategory": "Project Management",
+        "Courses": 5,
+        "Enrollments": 829,
+        "Revenue": 169103.21000000002
+      },
+      {
+        "CourseCategory": "Programming",
+        "Courses": 5,
+        "Enrollments": 806,
+        "Revenue": 77453.92
+      },
+      {
+        "CourseCategory": "Data Science",
+        "Courses": 5,
+        "Enrollments": 916,
+        "Revenue": 77052.32
+      },
+      {
+        "CourseCategory": "Cybersecurity",
+        "Courses": 5,
+        "Enrollments": 819,
+        "Revenue": 59139.0
+      },
+      {
+        "CourseCategory": "Digital Marketing",
+        "Courses": 5,
+        "Enrollments": 808,
+        "Revenue": 56261.32
+      },
+      {
+        "CourseCategory": "Design",
+        "Courses": 5,
+        "Enrollments": 827,
+        "Revenue": 43113.72
+      },
+      {
+        "CourseCategory": "Finance",
+        "Courses": 5,
+        "Enrollments": 864,
+        "Revenue": 28106.200000000004
+      },
+      {
+        "CourseCategory": "Web Development",
+        "Courses": 5,
+        "Enrollments": 844,
+        "Revenue": 16682.15
+      },
+      {
+        "CourseCategory": "Machine Learning",
+        "Courses": 5,
+        "Enrollments": 819,
+        "Revenue": 133.38
+      },
+      {
+        "CourseCategory": "Marketing",
+        "Courses": 5,
+        "Enrollments": 806,
+        "Revenue": 0.0
+      }
+    ],
+    "correlation_with_enrollments": {
+      "CourseRating": 0.294,
+      "YearsOfExperience": 0.073,
+      "TeacherRating": 0.019,
+      "ExpertiseMatch": -0.027,
+      "PricePerHour": -0.078,
+      "CourseDuration": -0.103,
+      "CourseRevenue": -0.117,
+      "LevelEncoded": -0.157,
+      "CoursePrice": -0.163
+    },
+    "correlation_with_revenue": {
+      "CoursePrice": 0.997,
+      "PricePerHour": 0.654,
+      "YearsOfExperience": 0.254,
+      "CourseRating": -0.018,
+      "LevelEncoded": -0.072,
+      "CourseDuration": -0.094,
+      "TeacherRating": -0.095,
+      "ExpertiseMatch": -0.107,
+      "EnrollmentCount": -0.117
+    },
+    "monthly": {
+      "months_observed": 12,
+      "first_month": "2025-01-31",
+      "last_month": "2025-12-31",
+      "mean_monthly_revenue": 75943.62,
+      "mean_monthly_enrollments": 833.33
+    },
+    "monthly_series": {
+      "2025-01-31": 83039.7,
+      "2025-02-28": 66983.84,
+      "2025-03-31": 81619.62,
+      "2025-04-30": 78656.48,
+      "2025-05-31": 72283.85,
+      "2025-06-30": 80465.73,
+      "2025-07-31": 72381.81,
+      "2025-08-31": 67602.5,
+      "2025-09-30": 81051.05,
+      "2025-10-31": 71287.01,
+      "2025-11-30": 83352.94,
+      "2025-12-31": 72598.94
+    },
+    "figures": {
+      "target_distributions": "/home/claude/edupro/outputs/figures/01_target_distributions.png",
+      "category_performance": "/home/claude/edupro/outputs/figures/02_category_performance.png",
+      "price_sensitivity": "/home/claude/edupro/outputs/figures/03_price_sensitivity.png",
+      "quality_signals": "/home/claude/edupro/outputs/figures/04_quality_signals.png",
+      "level_and_type": "/home/claude/edupro/outputs/figures/05_level_and_type.png",
+      "correlation": "/home/claude/edupro/outputs/figures/06_correlation.png",
+      "monthly_trend": "/home/claude/edupro/outputs/figures/07_monthly_trend.png"
+    },
+    "n_courses": 60,
+    "n_transactions": 10000,
+    "n_categories": 12
+  },
+  "dropped_correlated": [
+    [
+      "ExpertiseMatch",
+      "InstructorQualityScore",
+      0.9745
+    ],
+    [
+      "CourseRating",
+      "RatingXExperience",
+      0.9882
+    ]
+  ],
+  "diagnostics": {
+    "dispersion": {
+      "n_courses": 60,
+      "mean": 166.67,
+      "variance": 156.84,
+      "sd": 12.52,
+      "index_of_dispersion": 0.941,
+      "p_overdispersed": 0.6046,
+      "interpretation": "variance is fully consistent with chance - no evidence that any course is more popular than any other"
+    },
+    "uniformity": {
+      "chi2": 55.52,
+      "df": 59,
+      "p_value": 0.6046,
+      "rejects_uniform": false,
+      "interpretation": "cannot reject uniform allocation: the enrolment pattern is statistically indistinguishable from transactions assigned to courses at random"
+    },
+    "attribute_signal": {
+      "EnrollmentCount": {
+        "target": "EnrollmentCount",
+        "n_tests": 17,
+        "bonferroni_threshold": 0.00294,
+        "tests": [
+          {
+            "feature": "RatingTier",
+            "test": "anova",
+            "statistic": 3.664,
+            "p_value": 0.0175,
+            "significant_raw": true,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseRating",
+            "test": "pearson",
+            "statistic": 0.294,
+            "p_value": 0.0226,
+            "significant_raw": true,
+            "significant_corrected": false
+          },
+          {
+            "feature": "PriceBand",
+            "test": "anova",
+            "statistic": 3.057,
+            "p_value": 0.0548,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseType",
+            "test": "anova",
+            "statistic": 2.269,
+            "p_value": 0.1374,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CoursePrice",
+            "test": "pearson",
+            "statistic": -0.163,
+            "p_value": 0.2123,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "LevelEncoded",
+            "test": "pearson",
+            "statistic": -0.157,
+            "p_value": 0.2303,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseCategory",
+            "test": "anova",
+            "statistic": 1.283,
+            "p_value": 0.2629,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseLevel",
+            "test": "anova",
+            "statistic": 1.326,
+            "p_value": 0.2735,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseDuration",
+            "test": "pearson",
+            "statistic": -0.103,
+            "p_value": 0.4317,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "PriceXRating",
+            "test": "pearson",
+            "statistic": -0.081,
+            "p_value": 0.5364,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "PricePerHour",
+            "test": "pearson",
+            "statistic": -0.078,
+            "p_value": 0.5551,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "YearsOfExperience",
+            "test": "pearson",
+            "statistic": 0.073,
+            "p_value": 0.5775,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "PriceVsCategory",
+            "test": "pearson",
+            "statistic": -0.065,
+            "p_value": 0.6244,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CategoryMedianPrice",
+            "test": "pearson",
+            "statistic": -0.028,
+            "p_value": 0.8333,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "ExpertiseMatch",
+            "test": "pearson",
+            "statistic": -0.027,
+            "p_value": 0.8388,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "TeacherRating",
+            "test": "pearson",
+            "statistic": 0.019,
+            "p_value": 0.8857,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "DurationBucket",
+            "test": "anova",
+            "statistic": 0.151,
+            "p_value": 0.9286,
+            "significant_raw": false,
+            "significant_corrected": false
+          }
+        ],
+        "survivors": [],
+        "significant_before_correction_only": [
+          "CourseRating",
+          "RatingTier"
+        ],
+        "interpretation": "no attribute is associated with EnrollmentCount once corrected for testing 17 hypotheses"
+      },
+      "CourseRevenue": {
+        "target": "CourseRevenue",
+        "n_tests": 17,
+        "bonferroni_threshold": 0.00294,
+        "tests": [
+          {
+            "feature": "CoursePrice",
+            "test": "pearson",
+            "statistic": 0.997,
+            "p_value": 0.0,
+            "significant_raw": true,
+            "significant_corrected": true
+          },
+          {
+            "feature": "PricePerHour",
+            "test": "pearson",
+            "statistic": 0.654,
+            "p_value": 0.0,
+            "significant_raw": true,
+            "significant_corrected": true
+          },
+          {
+            "feature": "PriceXRating",
+            "test": "pearson",
+            "statistic": 0.916,
+            "p_value": 0.0,
+            "significant_raw": true,
+            "significant_corrected": true
+          },
+          {
+            "feature": "CourseType",
+            "test": "anova",
+            "statistic": 97.759,
+            "p_value": 0.0,
+            "significant_raw": true,
+            "significant_corrected": true
+          },
+          {
+            "feature": "PriceBand",
+            "test": "anova",
+            "statistic": 334.001,
+            "p_value": 0.0,
+            "significant_raw": true,
+            "significant_corrected": true
+          },
+          {
+            "feature": "CategoryMedianPrice",
+            "test": "pearson",
+            "statistic": 0.486,
+            "p_value": 0.0001,
+            "significant_raw": true,
+            "significant_corrected": true
+          },
+          {
+            "feature": "PriceVsCategory",
+            "test": "pearson",
+            "statistic": 0.456,
+            "p_value": 0.0003,
+            "significant_raw": true,
+            "significant_corrected": true
+          },
+          {
+            "feature": "YearsOfExperience",
+            "test": "pearson",
+            "statistic": 0.254,
+            "p_value": 0.0506,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseCategory",
+            "test": "anova",
+            "statistic": 1.77,
+            "p_value": 0.0862,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "DurationBucket",
+            "test": "anova",
+            "statistic": 1.17,
+            "p_value": 0.3295,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "RatingTier",
+            "test": "anova",
+            "statistic": 1.161,
+            "p_value": 0.3326,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "ExpertiseMatch",
+            "test": "pearson",
+            "statistic": -0.107,
+            "p_value": 0.417,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "TeacherRating",
+            "test": "pearson",
+            "statistic": -0.095,
+            "p_value": 0.4714,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseDuration",
+            "test": "pearson",
+            "statistic": -0.094,
+            "p_value": 0.4741,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "LevelEncoded",
+            "test": "pearson",
+            "statistic": -0.072,
+            "p_value": 0.585,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseLevel",
+            "test": "anova",
+            "statistic": 0.153,
+            "p_value": 0.8583,
+            "significant_raw": false,
+            "significant_corrected": false
+          },
+          {
+            "feature": "CourseRating",
+            "test": "pearson",
+            "statistic": -0.018,
+            "p_value": 0.8896,
+            "significant_raw": false,
+            "significant_corrected": false
+          }
+        ],
+        "survivors": [
+          "CoursePrice",
+          "PriceVsCategory",
+          "PricePerHour",
+          "CategoryMedianPrice",
+          "PriceXRating",
+          "CourseType",
+          "PriceBand"
+        ],
+        "significant_before_correction_only": [],
+        "interpretation": "7 attribute(s) associated with CourseRevenue after correction: CoursePrice, PriceVsCategory, PricePerHour, CategoryMedianPrice, PriceXRating, CourseType, PriceBand"
+      }
+    },
+    "tautology": {
+      "revenue_is_exactly_price_times_enrolments": true,
+      "mean_enrollments": 166.7,
+      "naive_rule": "Revenue = 166.7 x CoursePrice",
+      "naive_rule_r2": 0.9932,
+      "naive_rule_mae": 908.91,
+      "zero_price_courses": 38,
+      "zero_price_share_pct": 63.3,
+      "interpretation": "revenue is arithmetically determined by price and enrolments, and a rule with no model at all reaches R\u00b2 = 0.9932. Any learned model must be scored against this, not against the mean."
+    },
+    "verdict": {
+      "demand_signal_present": false,
+      "summary": "NO DEMAND SIGNAL. Enrolment counts are consistent with random allocation, and no course attribute predicts them after correcting for multiple testing. Any positive R\u00b2 a model reports for enrolment on this data is fitted noise."
+    }
+  },
+  "temporal_split": {
+    "cutoff": "2025-09-30",
+    "history_start": "2025-01-01",
+    "history_months": 8.9,
+    "forecast_end": "2025-12-30",
+    "forecast_months": 3.0,
+    "usable": true
+  },
+  "importance_files": {
+    "permutation_cold_EnrollmentCount": "/home/claude/edupro/outputs/tables/importance_permutation_cold_EnrollmentCount.csv",
+    "native_cold_EnrollmentCount": "/home/claude/edupro/outputs/tables/importance_native_cold_EnrollmentCount.csv",
+    "permutation_cold_CourseRevenue": "/home/claude/edupro/outputs/tables/importance_permutation_cold_CourseRevenue.csv",
+    "native_cold_CourseRevenue": "/home/claude/edupro/outputs/tables/importance_native_cold_CourseRevenue.csv",
+    "permutation_forecast_FutureEnrollments": "/home/claude/edupro/outputs/tables/importance_permutation_forecast_FutureEnrollments.csv",
+    "native_forecast_FutureEnrollments": "/home/claude/edupro/outputs/tables/importance_native_forecast_FutureEnrollments.csv",
+    "permutation_forecast_FutureRevenue": "/home/claude/edupro/outputs/tables/importance_permutation_forecast_FutureRevenue.csv",
+    "native_forecast_FutureRevenue": "/home/claude/edupro/outputs/tables/importance_native_forecast_FutureRevenue.csv"
+  },
+  "category_revenue_metrics": {
+    "MAE": 6213.6837,
+    "RMSE": 9709.3654,
+    "R2": 0.9424
+  },
+  "category_table": [
+    {
+      "CourseCategory": "Artificial Intelligence",
+      "Courses": 3,
+      "ActualRevenue": 117334.07,
+      "PredictedRevenue": 124605.87,
+      "ActualEnrollments": 469,
+      "PredictedEnrollments": 500.18999999999994,
+      "RevenueError": 7271.799999999988,
+      "RevenueErrorPct": 6.2
+    },
+    {
+      "CourseCategory": "Programming",
+      "Courses": 1,
+      "ActualRevenue": 77453.92,
+      "PredictedRevenue": 54735.19,
+      "ActualEnrollments": 164,
+      "PredictedEnrollments": 166.73,
+      "RevenueError": -22718.729999999996,
+      "RevenueErrorPct": -29.33
+    },
+    {
+      "CourseCategory": "Cybersecurity",
+      "Courses": 1,
+      "ActualRevenue": 59139.0,
+      "PredictedRevenue": 47177.72,
+      "ActualEnrollments": 150,
+      "PredictedEnrollments": 166.73,
+      "RevenueError": -11961.279999999999,
+      "RevenueErrorPct": -20.23
+    },
+    {
+      "CourseCategory": "Design",
+      "Courses": 1,
+      "ActualRevenue": 43113.72,
+      "PredictedRevenue": 44543.92,
+      "ActualEnrollments": 156,
+      "PredictedEnrollments": 166.73,
+      "RevenueError": 1430.199999999997,
+      "RevenueErrorPct": 3.32
+    },
+    {
+      "CourseCategory": "Web Development",
+      "Courses": 2,
+      "ActualRevenue": 16682.15,
+      "PredictedRevenue": 10354.69,
+      "ActualEnrollments": 349,
+      "PredictedEnrollments": 333.46,
+      "RevenueError": -6327.460000000001,
+      "RevenueErrorPct": -37.93
+    },
+    {
+      "CourseCategory": "Business",
+      "Courses": 2,
+      "ActualRevenue": 0.0,
+      "PredictedRevenue": 0.0,
+      "ActualEnrollments": 341,
+      "PredictedEnrollments": 333.46,
+      "RevenueError": 0.0,
+      "RevenueErrorPct": NaN
+    },
+    {
+      "CourseCategory": "Digital Marketing",
+      "Courses": 1,
+      "ActualRevenue": 0.0,
+      "PredictedRevenue": 0.0,
+      "ActualEnrollments": 194,
+      "PredictedEnrollments": 166.73,
+      "RevenueError": 0.0,
+      "RevenueErrorPct": NaN
+    },
+    {
+      "CourseCategory": "Project Management",
+      "Courses": 1,
+      "ActualRevenue": 0.0,
+      "PredictedRevenue": 0.0,
+      "ActualEnrollments": 153,
+      "PredictedEnrollments": 166.73,
+      "RevenueError": 0.0,
+      "RevenueErrorPct": NaN
+    }
+  ],
+  "models": {
+    "cold_EnrollmentCount": {
+      "label": "cold_start_EnrollmentCount",
+      "target": "EnrollmentCount",
+      "n_rows": 60,
+      "n_features": 23,
+      "features": {
+        "numeric": [
+          "CoursePrice",
+          "CourseDuration",
+          "CourseRating",
+          "LevelEncoded",
+          "YearsOfExperience",
+          "TeacherRating",
+          "ExpertiseMatch",
+          "ExactExpertiseMatch",
+          "PriceVsCategory",
+          "PricePerHour",
+          "CategoryMedianPrice",
+          "CategoryCourseCount",
+          "TeacherPortfolioSize",
+          "IsFree",
+          "PriceXRating",
+          "RatingMissing"
+        ],
+        "categorical": [
+          "CourseCategory",
+          "CourseType",
+          "CourseLevel",
+          "PriceBand",
+          "DurationBucket",
+          "RatingTier",
+          "ExperienceBucket"
+        ]
+      },
+      "results": {
+        "Baseline (mean)": {
+          "cv_r2": -0.0976,
+          "log_target": false,
+          "best_params": {},
+          "MAE": 10.5278,
+          "RMSE": 13.7285,
+          "R2": -0.0343
+        },
+        "LinearRegression": {
+          "cv_r2": -13.1521,
+          "log_target": true,
+          "best_params": {},
+          "MAE": 24.0303,
+          "RMSE": 27.0553,
+          "R2": -3.017
+        },
+        "Ridge": {
+          "cv_r2": -0.1359,
+          "log_target": false,
+          "best_params": {
+            "alpha": 100.0
+          },
+          "MAE": 10.4318,
+          "RMSE": 13.4371,
+          "R2": 0.0091
+        },
+        "Lasso": {
+          "cv_r2": -0.096,
+          "log_target": true,
+          "best_params": {
+            "alpha": 0.1
+          },
+          "MAE": 10.4556,
+          "RMSE": 13.6563,
+          "R2": -0.0234
+        },
+        "RandomForest": {
+          "cv_r2": -0.1177,
+          "log_target": true,
+          "best_params": {
+            "max_depth": 8,
+            "min_samples_leaf": 2,
+            "n_estimators": 300
+          },
+          "MAE": 11.4884,
+          "RMSE": 14.6932,
+          "R2": -0.1848
+        },
+        "GradientBoosting": {
+          "cv_r2": -0.4812,
+          "log_target": false,
+          "best_params": {
+            "learning_rate": 0.05,
+            "max_depth": 3,
+            "n_estimators": 200
+          },
+          "MAE": 12.9727,
+          "RMSE": 16.0035,
+          "R2": -0.4055
+        }
+      },
+      "best_name": "Lasso",
+      "split": {
+        "train_index": [
+          31,
+          3,
+          52,
+          17,
+          8,
+          6,
+          40,
+          4,
+          43,
+          19,
+          34,
+          58,
+          25,
+          56,
+          15,
+          27,
+          9,
+          30,
+          26,
+          16,
+          24,
+          55,
+          11,
+          32,
+          53,
+          41,
+          37,
+          29,
+          44,
+          1,
+          21,
+          2,
+          47,
+          39,
+          35,
+          23,
+          49,
+          10,
+          22,
+          18,
+          59,
+          20,
+          7,
+          42,
+          14,
+          28,
+          51,
+          38
+        ],
+        "test_index": [
+          0,
+          5,
+          36,
+          45,
+          13,
+          54,
+          33,
+          48,
+          12,
+          57,
+          46,
+          50
+        ],
+        "y_test": [
+          164.0,
+          156.0,
+          153.0,
+          140.0,
+          171.0,
+          178.0,
+          150.0,
+          163.0,
+          170.0,
+          194.0,
+          166.0,
+          171.0
+        ],
+        "y_pred": [
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877,
+          166.73340855342877
+        ]
+      },
+      "permutation_importance": [
+        {
+          "Feature": "CoursePrice",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseDuration",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseRating",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "YearsOfExperience",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "TeacherRating",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PricePerHour",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CategoryCourseCount",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "TeacherPortfolioSize",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "IsFree",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PriceXRating",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "RatingMissing",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseCategory",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseType",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseLevel",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PriceBand",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "DurationBucket",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "RatingTier",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExperienceBucket",
+          "Importance": 0.0,
+          "Std": 0.0
+        }
+      ],
+      "native_importance": [
+        {
+          "Feature": "CoursePrice",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseDuration",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseRating",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "YearsOfExperience",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "TeacherRating",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PricePerHour",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CategoryCourseCount",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "TeacherPortfolioSize",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "IsFree",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceXRating",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "RatingMissing",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Artificial Intelligence",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Business",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Cybersecurity",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Data Science",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Design",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Digital Marketing",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Finance",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Machine Learning",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Marketing",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Programming",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Project Management",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Web Development",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseType_Free",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseType_Paid",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseLevel_Advanced",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseLevel_Beginner",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseLevel_Intermediate",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceBand_High",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceBand_Low",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceBand_Medium",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "DurationBucket_Extended",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "DurationBucket_Long",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "DurationBucket_Medium",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "DurationBucket_Short",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        }
+      ]
+    },
+    "cold_CourseRevenue": {
+      "label": "cold_start_CourseRevenue",
+      "target": "CourseRevenue",
+      "n_rows": 60,
+      "n_features": 23,
+      "features": {
+        "numeric": [
+          "CoursePrice",
+          "CourseDuration",
+          "CourseRating",
+          "LevelEncoded",
+          "YearsOfExperience",
+          "TeacherRating",
+          "ExpertiseMatch",
+          "ExactExpertiseMatch",
+          "PriceVsCategory",
+          "PricePerHour",
+          "CategoryMedianPrice",
+          "CategoryCourseCount",
+          "TeacherPortfolioSize",
+          "IsFree",
+          "PriceXRating",
+          "RatingMissing"
+        ],
+        "categorical": [
+          "CourseCategory",
+          "CourseType",
+          "CourseLevel",
+          "PriceBand",
+          "DurationBucket",
+          "RatingTier",
+          "ExperienceBucket"
+        ]
+      },
+      "results": {
+        "Baseline (mean)": {
+          "cv_r2": -0.0576,
+          "log_target": false,
+          "best_params": {},
+          "MAE": 23363.2133,
+          "RMSE": 31043.5927,
+          "R2": -0.2416
+        },
+        "LinearRegression": {
+          "cv_r2": 0.7129,
+          "log_target": false,
+          "best_params": {},
+          "MAE": 4292.2146,
+          "RMSE": 6769.2442,
+          "R2": 0.941
+        },
+        "Ridge": {
+          "cv_r2": 0.7662,
+          "log_target": false,
+          "best_params": {
+            "alpha": 0.1
+          },
+          "MAE": 3016.7921,
+          "RMSE": 4839.1989,
+          "R2": 0.9698
+        },
+        "Lasso": {
+          "cv_r2": 0.7482,
+          "log_target": false,
+          "best_params": {
+            "alpha": 1.0
+          },
+          "MAE": 4202.6448,
+          "RMSE": 6779.0491,
+          "R2": 0.9408
+        },
+        "RandomForest": {
+          "cv_r2": 0.917,
+          "log_target": true,
+          "best_params": {
+            "max_depth": 8,
+            "min_samples_leaf": 1,
+            "n_estimators": 300
+          },
+          "MAE": 5186.5853,
+          "RMSE": 8343.2837,
+          "R2": 0.9103
+        },
+        "GradientBoosting": {
+          "cv_r2": 0.7524,
+          "log_target": false,
+          "best_params": {
+            "learning_rate": 0.05,
+            "max_depth": 2,
+            "n_estimators": 200
+          },
+          "MAE": 3664.5967,
+          "RMSE": 4962.9596,
+          "R2": 0.9683
+        },
+        "Naive: mean enrolments x price": {
+          "MAE": 1724.3242,
+          "RMSE": 2977.8591,
+          "R2": 0.9886,
+          "cv_r2": NaN,
+          "log_target": false,
+          "best_params": {},
+          "rule": "Revenue = 167.2 x CoursePrice"
+        }
+      },
+      "best_name": "RandomForest",
+      "split": {
+        "train_index": [
+          31,
+          3,
+          52,
+          17,
+          8,
+          6,
+          40,
+          4,
+          43,
+          19,
+          34,
+          58,
+          25,
+          56,
+          15,
+          27,
+          9,
+          30,
+          26,
+          16,
+          24,
+          55,
+          11,
+          32,
+          53,
+          41,
+          37,
+          29,
+          44,
+          1,
+          21,
+          2,
+          47,
+          39,
+          35,
+          23,
+          49,
+          10,
+          22,
+          18,
+          59,
+          20,
+          7,
+          42,
+          14,
+          28,
+          51,
+          38
+        ],
+        "test_index": [
+          0,
+          5,
+          36,
+          45,
+          13,
+          54,
+          33,
+          48,
+          12,
+          57,
+          46,
+          50
+        ],
+        "y_test": [
+          77453.92,
+          43113.72,
+          0.0,
+          34734.0,
+          0.0,
+          10202.960000000001,
+          59139.0,
+          67728.13,
+          0.0,
+          0.0,
+          14871.94,
+          6479.1900000000005
+        ],
+        "y_pred": [
+          54735.186886268035,
+          44543.923923268616,
+          0.0,
+          38480.23664509705,
+          0.0,
+          8606.930122228147,
+          47177.72417046234,
+          61463.35413312295,
+          0.0,
+          0.0,
+          24662.276198086452,
+          1747.7577967752409
+        ]
+      },
+      "permutation_importance": [
+        {
+          "Feature": "CoursePrice",
+          "Importance": 0.67189,
+          "Std": 0.2822
+        },
+        {
+          "Feature": "PricePerHour",
+          "Importance": 0.58456,
+          "Std": 0.2953
+        },
+        {
+          "Feature": "PriceXRating",
+          "Importance": 0.56408,
+          "Std": 0.29867
+        },
+        {
+          "Feature": "CourseType",
+          "Importance": 0.35676,
+          "Std": 0.22029
+        },
+        {
+          "Feature": "IsFree",
+          "Importance": 0.22181,
+          "Std": 0.14349
+        },
+        {
+          "Feature": "PriceBand",
+          "Importance": 0.06725,
+          "Std": 0.03711
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Importance": 0.0062,
+          "Std": 0.00523
+        },
+        {
+          "Feature": "CourseRating",
+          "Importance": 0.00196,
+          "Std": 0.00172
+        },
+        {
+          "Feature": "CourseCategory",
+          "Importance": 0.0015,
+          "Std": 0.00424
+        },
+        {
+          "Feature": "RatingTier",
+          "Importance": 0.00149,
+          "Std": 0.00105
+        },
+        {
+          "Feature": "DurationBucket",
+          "Importance": 0.00083,
+          "Std": 0.00262
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Importance": 0.00019,
+          "Std": 0.00092
+        },
+        {
+          "Feature": "CategoryCourseCount",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "TeacherPortfolioSize",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExperienceBucket",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "RatingMissing",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseDuration",
+          "Importance": -0.00022,
+          "Std": 0.00224
+        },
+        {
+          "Feature": "CourseLevel",
+          "Importance": -0.00206,
+          "Std": 0.00227
+        },
+        {
+          "Feature": "YearsOfExperience",
+          "Importance": -0.00386,
+          "Std": 0.00463
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Importance": -0.00451,
+          "Std": 0.00359
+        },
+        {
+          "Feature": "TeacherRating",
+          "Importance": -0.01016,
+          "Std": 0.00925
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Importance": -0.0112,
+          "Std": 0.0094
+        }
+      ],
+      "native_importance": [
+        {
+          "Feature": "PricePerHour",
+          "Value": 0.33936,
+          "Kind": "impurity",
+          "AbsValue": 0.33936
+        },
+        {
+          "Feature": "PriceXRating",
+          "Value": 0.22233,
+          "Kind": "impurity",
+          "AbsValue": 0.22233
+        },
+        {
+          "Feature": "CoursePrice",
+          "Value": 0.20666,
+          "Kind": "impurity",
+          "AbsValue": 0.20666
+        },
+        {
+          "Feature": "IsFree",
+          "Value": 0.08184,
+          "Kind": "impurity",
+          "AbsValue": 0.08184
+        },
+        {
+          "Feature": "CourseType_Paid",
+          "Value": 0.07873,
+          "Kind": "impurity",
+          "AbsValue": 0.07873
+        },
+        {
+          "Feature": "CourseType_Free",
+          "Value": 0.05962,
+          "Kind": "impurity",
+          "AbsValue": 0.05962
+        },
+        {
+          "Feature": "PriceBand_Low",
+          "Value": 0.00674,
+          "Kind": "impurity",
+          "AbsValue": 0.00674
+        },
+        {
+          "Feature": "YearsOfExperience",
+          "Value": 0.0032,
+          "Kind": "impurity",
+          "AbsValue": 0.0032
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Value": 0.00033,
+          "Kind": "impurity",
+          "AbsValue": 0.00033
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Value": 0.00029,
+          "Kind": "impurity",
+          "AbsValue": 0.00029
+        },
+        {
+          "Feature": "TeacherRating",
+          "Value": 0.00028,
+          "Kind": "impurity",
+          "AbsValue": 0.00028
+        },
+        {
+          "Feature": "CourseDuration",
+          "Value": 8e-05,
+          "Kind": "impurity",
+          "AbsValue": 8e-05
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Value": 7e-05,
+          "Kind": "impurity",
+          "AbsValue": 7e-05
+        },
+        {
+          "Feature": "CourseCategory_Finance",
+          "Value": 7e-05,
+          "Kind": "impurity",
+          "AbsValue": 7e-05
+        },
+        {
+          "Feature": "CourseLevel_Beginner",
+          "Value": 6e-05,
+          "Kind": "impurity",
+          "AbsValue": 6e-05
+        },
+        {
+          "Feature": "DurationBucket_Extended",
+          "Value": 6e-05,
+          "Kind": "impurity",
+          "AbsValue": 6e-05
+        },
+        {
+          "Feature": "CourseCategory_Digital Marketing",
+          "Value": 5e-05,
+          "Kind": "impurity",
+          "AbsValue": 5e-05
+        },
+        {
+          "Feature": "CourseRating",
+          "Value": 5e-05,
+          "Kind": "impurity",
+          "AbsValue": 5e-05
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Value": 5e-05,
+          "Kind": "impurity",
+          "AbsValue": 5e-05
+        },
+        {
+          "Feature": "PriceBand_High",
+          "Value": 4e-05,
+          "Kind": "impurity",
+          "AbsValue": 4e-05
+        },
+        {
+          "Feature": "RatingTier_Average",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "RatingTier_Poor",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "DurationBucket_Short",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "CourseLevel_Advanced",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "PriceBand_Medium",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "DurationBucket_Medium",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "CourseCategory_Project Management",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "CourseCategory_Artificial Intelligence",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "CourseCategory_Business",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "RatingTier_Good",
+          "Value": 1e-05,
+          "Kind": "impurity",
+          "AbsValue": 1e-05
+        },
+        {
+          "Feature": "TeacherPortfolioSize",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CategoryCourseCount",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "RatingMissing",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Cybersecurity",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Data Science",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Design",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Web Development",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Programming",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Machine Learning",
+          "Value": 0.0,
+          "Kind": "impurity",
+          "AbsValue": 0.0
+        }
+      ]
+    },
+    "forecast_FutureEnrollments": {
+      "label": "forecast_FutureEnrollments",
+      "target": "FutureEnrollments",
+      "n_rows": 60,
+      "n_features": 28,
+      "features": {
+        "numeric": [
+          "CoursePrice",
+          "CourseDuration",
+          "CourseRating",
+          "LevelEncoded",
+          "YearsOfExperience",
+          "TeacherRating",
+          "ExpertiseMatch",
+          "ExactExpertiseMatch",
+          "PriceVsCategory",
+          "PricePerHour",
+          "CategoryMedianPrice",
+          "CategoryCourseCount",
+          "TeacherPortfolioSize",
+          "IsFree",
+          "PriceXRating",
+          "RatingMissing",
+          "HistEnrollments",
+          "HistRevenue",
+          "HistActiveMonths",
+          "HistDaysSinceLastSale",
+          "IsNewCourse"
+        ],
+        "categorical": [
+          "CourseCategory",
+          "CourseType",
+          "CourseLevel",
+          "PriceBand",
+          "DurationBucket",
+          "RatingTier",
+          "ExperienceBucket"
+        ]
+      },
+      "results": {
+        "Baseline (mean)": {
+          "cv_r2": -0.0879,
+          "log_target": false,
+          "best_params": {},
+          "MAE": 5.3229,
+          "RMSE": 6.6539,
+          "R2": -0.0043
+        },
+        "LinearRegression": {
+          "cv_r2": -487.8577,
+          "log_target": false,
+          "best_params": {},
+          "MAE": 17.4096,
+          "RMSE": 19.5425,
+          "R2": -7.6633
+        },
+        "Ridge": {
+          "cv_r2": -0.0908,
+          "log_target": false,
+          "best_params": {
+            "alpha": 100.0
+          },
+          "MAE": 5.7724,
+          "RMSE": 7.1097,
+          "R2": -0.1466
+        },
+        "Lasso": {
+          "cv_r2": 0.0234,
+          "log_target": false,
+          "best_params": {
+            "alpha": 1.0
+          },
+          "MAE": 6.0844,
+          "RMSE": 7.2827,
+          "R2": -0.2031
+        },
+        "RandomForest": {
+          "cv_r2": -0.2138,
+          "log_target": true,
+          "best_params": {
+            "max_depth": 8,
+            "min_samples_leaf": 1,
+            "n_estimators": 300
+          },
+          "MAE": 6.1055,
+          "RMSE": 7.3788,
+          "R2": -0.2351
+        },
+        "GradientBoosting": {
+          "cv_r2": -0.7728,
+          "log_target": true,
+          "best_params": {
+            "learning_rate": 0.05,
+            "max_depth": 2,
+            "n_estimators": 200
+          },
+          "MAE": 6.1987,
+          "RMSE": 7.0881,
+          "R2": -0.1397
+        }
+      },
+      "best_name": "Lasso",
+      "split": {
+        "train_index": [
+          31,
+          3,
+          52,
+          17,
+          8,
+          6,
+          40,
+          4,
+          43,
+          19,
+          34,
+          58,
+          25,
+          56,
+          15,
+          27,
+          9,
+          30,
+          26,
+          16,
+          24,
+          55,
+          11,
+          32,
+          53,
+          41,
+          37,
+          29,
+          44,
+          1,
+          21,
+          2,
+          47,
+          39,
+          35,
+          23,
+          49,
+          10,
+          22,
+          18,
+          59,
+          20,
+          7,
+          42,
+          14,
+          28,
+          51,
+          38
+        ],
+        "test_index": [
+          0,
+          5,
+          36,
+          45,
+          13,
+          54,
+          33,
+          48,
+          12,
+          57,
+          46,
+          50
+        ],
+        "y_test": [
+          38.0,
+          39.0,
+          30.0,
+          30.0,
+          45.0,
+          46.0,
+          42.0,
+          48.0,
+          39.0,
+          54.0,
+          44.0,
+          43.0
+        ],
+        "y_pred": [
+          41.82032148714841,
+          41.90673084593443,
+          42.657618559121936,
+          41.4465491226609,
+          40.743551247306044,
+          40.315968115502386,
+          41.87186915684008,
+          38.92476907448281,
+          41.288717281382176,
+          41.99802154105712,
+          38.67109744051348,
+          39.58205277458653
+        ]
+      },
+      "permutation_importance": [
+        {
+          "Feature": "IsFree",
+          "Importance": 0.00683,
+          "Std": 0.0373
+        },
+        {
+          "Feature": "CourseDuration",
+          "Importance": 0.00145,
+          "Std": 0.00286
+        },
+        {
+          "Feature": "CourseRating",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CoursePrice",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "TeacherRating",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PricePerHour",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CategoryCourseCount",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "IsNewCourse",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "TeacherPortfolioSize",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PriceXRating",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "RatingMissing",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "HistEnrollments",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "HistRevenue",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "HistActiveMonths",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "HistDaysSinceLastSale",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "PriceBand",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseCategory",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseType",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "CourseLevel",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "RatingTier",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "DurationBucket",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExperienceBucket",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "YearsOfExperience",
+          "Importance": -0.18115,
+          "Std": 0.13304
+        }
+      ],
+      "native_importance": [
+        {
+          "Feature": "YearsOfExperience",
+          "Value": 1.98613,
+          "Kind": "coefficient",
+          "AbsValue": 1.98613
+        },
+        {
+          "Feature": "IsFree",
+          "Value": 0.52062,
+          "Kind": "coefficient",
+          "AbsValue": 0.52062
+        },
+        {
+          "Feature": "CourseDuration",
+          "Value": -0.02639,
+          "Kind": "coefficient",
+          "AbsValue": 0.02639
+        },
+        {
+          "Feature": "CoursePrice",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseRating",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "TeacherRating",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PricePerHour",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CategoryCourseCount",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "TeacherPortfolioSize",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceXRating",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "RatingMissing",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "HistEnrollments",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "HistRevenue",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "HistActiveMonths",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "HistDaysSinceLastSale",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "IsNewCourse",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Artificial Intelligence",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Business",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Cybersecurity",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Data Science",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Design",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Digital Marketing",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Finance",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Machine Learning",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Marketing",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Programming",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Project Management",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseCategory_Web Development",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseType_Free",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseType_Paid",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseLevel_Advanced",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseLevel_Beginner",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "CourseLevel_Intermediate",
+          "Value": -0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceBand_High",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        },
+        {
+          "Feature": "PriceBand_Low",
+          "Value": 0.0,
+          "Kind": "coefficient",
+          "AbsValue": 0.0
+        }
+      ]
+    },
+    "forecast_FutureRevenue": {
+      "label": "forecast_FutureRevenue",
+      "target": "FutureRevenue",
+      "n_rows": 60,
+      "n_features": 28,
+      "features": {
+        "numeric": [
+          "CoursePrice",
+          "CourseDuration",
+          "CourseRating",
+          "LevelEncoded",
+          "YearsOfExperience",
+          "TeacherRating",
+          "ExpertiseMatch",
+          "ExactExpertiseMatch",
+          "PriceVsCategory",
+          "PricePerHour",
+          "CategoryMedianPrice",
+          "CategoryCourseCount",
+          "TeacherPortfolioSize",
+          "IsFree",
+          "PriceXRating",
+          "RatingMissing",
+          "HistEnrollments",
+          "HistRevenue",
+          "HistActiveMonths",
+          "HistDaysSinceLastSale",
+          "IsNewCourse"
+        ],
+        "categorical": [
+          "CourseCategory",
+          "CourseType",
+          "CourseLevel",
+          "PriceBand",
+          "DurationBucket",
+          "RatingTier",
+          "ExperienceBucket"
+        ]
+      },
+      "results": {
+        "Baseline (mean)": {
+          "cv_r2": -0.0556,
+          "log_target": false,
+          "best_params": {},
+          "MAE": 6028.9533,
+          "RMSE": 8202.9883,
+          "R2": -0.2506
+        },
+        "LinearRegression": {
+          "cv_r2": -0.9363,
+          "log_target": false,
+          "best_params": {},
+          "MAE": 758.8135,
+          "RMSE": 1287.1184,
+          "R2": 0.9692
+        },
+        "Ridge": {
+          "cv_r2": 0.7705,
+          "log_target": false,
+          "best_params": {
+            "alpha": 0.1
+          },
+          "MAE": 884.7578,
+          "RMSE": 1329.1748,
+          "R2": 0.9672
+        },
+        "Lasso": {
+          "cv_r2": 0.7686,
+          "log_target": false,
+          "best_params": {
+            "alpha": 1.0
+          },
+          "MAE": 655.5109,
+          "RMSE": 1146.9316,
+          "R2": 0.9756
+        },
+        "RandomForest": {
+          "cv_r2": 0.7408,
+          "log_target": false,
+          "best_params": {
+            "max_depth": null,
+            "min_samples_leaf": 2,
+            "n_estimators": 300
+          },
+          "MAE": 1270.68,
+          "RMSE": 1822.7309,
+          "R2": 0.9383
+        },
+        "GradientBoosting": {
+          "cv_r2": 0.765,
+          "log_target": true,
+          "best_params": {
+            "learning_rate": 0.1,
+            "max_depth": 2,
+            "n_estimators": 400
+          },
+          "MAE": 830.9255,
+          "RMSE": 1250.9369,
+          "R2": 0.9709
+        }
+      },
+      "best_name": "Ridge",
+      "split": {
+        "train_index": [
+          31,
+          3,
+          52,
+          17,
+          8,
+          6,
+          40,
+          4,
+          43,
+          19,
+          34,
+          58,
+          25,
+          56,
+          15,
+          27,
+          9,
+          30,
+          26,
+          16,
+          24,
+          55,
+          11,
+          32,
+          53,
+          41,
+          37,
+          29,
+          44,
+          1,
+          21,
+          2,
+          47,
+          39,
+          35,
+          23,
+          49,
+          10,
+          22,
+          18,
+          59,
+          20,
+          7,
+          42,
+          14,
+          28,
+          51,
+          38
+        ],
+        "test_index": [
+          0,
+          5,
+          36,
+          45,
+          13,
+          54,
+          33,
+          48,
+          12,
+          57,
+          46,
+          50
+        ],
+        "y_test": [
+          17946.64,
+          10778.43,
+          0.0,
+          7443.0,
+          0.0,
+          2636.72,
+          16558.92,
+          19944.48,
+          0.0,
+          0.0,
+          3941.96,
+          1629.27
+        ],
+        "y_pred": [
+          16443.94793862768,
+          9351.356365823829,
+          129.29304131665504,
+          10498.498250837329,
+          0.0,
+          2015.093492406601,
+          14809.971205604703,
+          17919.359272060276,
+          0.0,
+          0.0,
+          3866.227166656503,
+          1660.377622314443
+        ]
+      },
+      "permutation_importance": [
+        {
+          "Feature": "CoursePrice",
+          "Importance": 0.53981,
+          "Std": 0.20227
+        },
+        {
+          "Feature": "HistRevenue",
+          "Importance": 0.51776,
+          "Std": 0.19843
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Importance": 0.04737,
+          "Std": 0.02053
+        },
+        {
+          "Feature": "PriceXRating",
+          "Importance": 0.01805,
+          "Std": 0.01341
+        },
+        {
+          "Feature": "PriceBand",
+          "Importance": 0.01026,
+          "Std": 0.00381
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Importance": 0.00768,
+          "Std": 0.01109
+        },
+        {
+          "Feature": "CourseRating",
+          "Importance": 0.00466,
+          "Std": 0.0024
+        },
+        {
+          "Feature": "IsFree",
+          "Importance": 0.00129,
+          "Std": 0.00182
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Importance": 0.0011,
+          "Std": 0.00115
+        },
+        {
+          "Feature": "PricePerHour",
+          "Importance": 0.001,
+          "Std": 0.00281
+        },
+        {
+          "Feature": "HistActiveMonths",
+          "Importance": 0.00089,
+          "Std": 0.00113
+        },
+        {
+          "Feature": "CourseCategory",
+          "Importance": 0.00059,
+          "Std": 0.0031
+        },
+        {
+          "Feature": "CourseType",
+          "Importance": 0.00041,
+          "Std": 0.00073
+        },
+        {
+          "Feature": "TeacherRating",
+          "Importance": 0.00015,
+          "Std": 0.00204
+        },
+        {
+          "Feature": "YearsOfExperience",
+          "Importance": 5e-05,
+          "Std": 0.00015
+        },
+        {
+          "Feature": "CategoryCourseCount",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "ExperienceBucket",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "HistEnrollments",
+          "Importance": -0.0,
+          "Std": 2e-05
+        },
+        {
+          "Feature": "TeacherPortfolioSize",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "RatingMissing",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "IsNewCourse",
+          "Importance": 0.0,
+          "Std": 0.0
+        },
+        {
+          "Feature": "RatingTier",
+          "Importance": -4e-05,
+          "Std": 0.00256
+        },
+        {
+          "Feature": "HistDaysSinceLastSale",
+          "Importance": -7e-05,
+          "Std": 0.00106
+        },
+        {
+          "Feature": "CourseDuration",
+          "Importance": -0.00021,
+          "Std": 0.0002
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Importance": -0.00037,
+          "Std": 0.00111
+        },
+        {
+          "Feature": "CourseLevel",
+          "Importance": -0.00042,
+          "Std": 0.00045
+        },
+        {
+          "Feature": "DurationBucket",
+          "Importance": -0.00065,
+          "Std": 0.00113
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Importance": -0.00141,
+          "Std": 0.00235
+        }
+      ],
+      "native_importance": [
+        {
+          "Feature": "HistRevenue",
+          "Value": 3076.14485,
+          "Kind": "coefficient",
+          "AbsValue": 3076.14485
+        },
+        {
+          "Feature": "CoursePrice",
+          "Value": 2894.41214,
+          "Kind": "coefficient",
+          "AbsValue": 2894.41214
+        },
+        {
+          "Feature": "PriceXRating",
+          "Value": -872.53028,
+          "Kind": "coefficient",
+          "AbsValue": 872.53028
+        },
+        {
+          "Feature": "CategoryMedianPrice",
+          "Value": 605.13238,
+          "Kind": "coefficient",
+          "AbsValue": 605.13238
+        },
+        {
+          "Feature": "CourseCategory_Digital Marketing",
+          "Value": -520.37744,
+          "Kind": "coefficient",
+          "AbsValue": 520.37744
+        },
+        {
+          "Feature": "PriceVsCategory",
+          "Value": 514.50227,
+          "Kind": "coefficient",
+          "AbsValue": 514.50227
+        },
+        {
+          "Feature": "PriceBand_Medium",
+          "Value": -483.99093,
+          "Kind": "coefficient",
+          "AbsValue": 483.99093
+        },
+        {
+          "Feature": "PriceBand_High",
+          "Value": 336.46977,
+          "Kind": "coefficient",
+          "AbsValue": 336.46977
+        },
+        {
+          "Feature": "RatingTier_Poor",
+          "Value": 307.0925,
+          "Kind": "coefficient",
+          "AbsValue": 307.0925
+        },
+        {
+          "Feature": "CourseCategory_Marketing",
+          "Value": 271.76999,
+          "Kind": "coefficient",
+          "AbsValue": 271.76999
+        },
+        {
+          "Feature": "RatingTier_Good",
+          "Value": -271.44397,
+          "Kind": "coefficient",
+          "AbsValue": 271.44397
+        },
+        {
+          "Feature": "CourseCategory_Project Management",
+          "Value": 248.45039,
+          "Kind": "coefficient",
+          "AbsValue": 248.45039
+        },
+        {
+          "Feature": "TeacherRating",
+          "Value": -189.78754,
+          "Kind": "coefficient",
+          "AbsValue": 189.78754
+        },
+        {
+          "Feature": "CourseRating",
+          "Value": 188.76004,
+          "Kind": "coefficient",
+          "AbsValue": 188.76004
+        },
+        {
+          "Feature": "CourseCategory_Business",
+          "Value": -186.53275,
+          "Kind": "coefficient",
+          "AbsValue": 186.53275
+        },
+        {
+          "Feature": "CourseCategory_Design",
+          "Value": -173.74073,
+          "Kind": "coefficient",
+          "AbsValue": 173.74073
+        },
+        {
+          "Feature": "CourseCategory_Artificial Intelligence",
+          "Value": 169.56054,
+          "Kind": "coefficient",
+          "AbsValue": 169.56054
+        },
+        {
+          "Feature": "PricePerHour",
+          "Value": -165.55552,
+          "Kind": "coefficient",
+          "AbsValue": 165.55552
+        },
+        {
+          "Feature": "ExactExpertiseMatch",
+          "Value": -157.60038,
+          "Kind": "coefficient",
+          "AbsValue": 157.60038
+        },
+        {
+          "Feature": "PriceBand_Low",
+          "Value": 147.52117,
+          "Kind": "coefficient",
+          "AbsValue": 147.52117
+        },
+        {
+          "Feature": "CourseCategory_Data Science",
+          "Value": 143.32397,
+          "Kind": "coefficient",
+          "AbsValue": 143.32397
+        },
+        {
+          "Feature": "CourseCategory_Finance",
+          "Value": 136.99279,
+          "Kind": "coefficient",
+          "AbsValue": 136.99279
+        },
+        {
+          "Feature": "RatingTier_Excellent",
+          "Value": -132.57295,
+          "Kind": "coefficient",
+          "AbsValue": 132.57295
+        },
+        {
+          "Feature": "CourseCategory_Web Development",
+          "Value": -122.99535,
+          "Kind": "coefficient",
+          "AbsValue": 122.99535
+        },
+        {
+          "Feature": "IsFree",
+          "Value": -115.56989,
+          "Kind": "coefficient",
+          "AbsValue": 115.56989
+        },
+        {
+          "Feature": "RatingTier_Average",
+          "Value": 96.92442,
+          "Kind": "coefficient",
+          "AbsValue": 96.92442
+        },
+        {
+          "Feature": "LevelEncoded",
+          "Value": -95.11153,
+          "Kind": "coefficient",
+          "AbsValue": 95.11153
+        },
+        {
+          "Feature": "HistActiveMonths",
+          "Value": -92.5977,
+          "Kind": "coefficient",
+          "AbsValue": 92.5977
+        },
+        {
+          "Feature": "ExpertiseMatch",
+          "Value": 92.37849,
+          "Kind": "coefficient",
+          "AbsValue": 92.37849
+        },
+        {
+          "Feature": "DurationBucket_Short",
+          "Value": 85.93564,
+          "Kind": "coefficient",
+          "AbsValue": 85.93564
+        },
+        {
+          "Feature": "DurationBucket_Long",
+          "Value": -74.54219,
+          "Kind": "coefficient",
+          "AbsValue": 74.54219
+        },
+        {
+          "Feature": "DurationBucket_Extended",
+          "Value": -73.57342,
+          "Kind": "coefficient",
+          "AbsValue": 73.57342
+        },
+        {
+          "Feature": "DurationBucket_Medium",
+          "Value": 62.17997,
+          "Kind": "coefficient",
+          "AbsValue": 62.17997
+        },
+        {
+          "Feature": "HistDaysSinceLastSale",
+          "Value": -60.54113,
+          "Kind": "coefficient",
+          "AbsValue": 60.54113
+        },
+        {
+          "Feature": "CourseCategory_Machine Learning",
+          "Value": 57.79692,
+          "Kind": "coefficient",
+          "AbsValue": 57.79692
+        },
+        {
+          "Feature": "CourseType_Free",
+          "Value": -52.52994,
+          "Kind": "coefficient",
+          "AbsValue": 52.52994
+        },
+        {
+          "Feature": "CourseType_Paid",
+          "Value": 52.52994,
+          "Kind": "coefficient",
+          "AbsValue": 52.52994
+        },
+        {
+          "Feature": "CourseLevel_Beginner",
+          "Value": 47.36756,
+          "Kind": "coefficient",
+          "AbsValue": 47.36756
+        },
+        {
+          "Feature": "CourseCategory_Cybersecurity",
+          "Value": -43.55844,
+          "Kind": "coefficient",
+          "AbsValue": 43.55844
+        },
+        {
+          "Feature": "CourseLevel_Advanced",
+          "Value": -32.58255,
+          "Kind": "coefficient",
+          "AbsValue": 32.58255
+        }
+      ]
+    }
+  },
+  "runtime_seconds": 129.9
+}

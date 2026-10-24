@@ -1,0 +1,46 @@
+Feature,Value,Kind,AbsValue
+CoursePrice,0.0,coefficient,0.0
+CourseDuration,0.0,coefficient,0.0
+CourseRating,0.0,coefficient,0.0
+LevelEncoded,0.0,coefficient,0.0
+YearsOfExperience,0.0,coefficient,0.0
+TeacherRating,0.0,coefficient,0.0
+ExpertiseMatch,0.0,coefficient,0.0
+ExactExpertiseMatch,0.0,coefficient,0.0
+PriceVsCategory,0.0,coefficient,0.0
+PricePerHour,0.0,coefficient,0.0
+CategoryMedianPrice,0.0,coefficient,0.0
+CategoryCourseCount,0.0,coefficient,0.0
+TeacherPortfolioSize,0.0,coefficient,0.0
+IsFree,0.0,coefficient,0.0
+PriceXRating,0.0,coefficient,0.0
+RatingMissing,0.0,coefficient,0.0
+CourseCategory_Artificial Intelligence,0.0,coefficient,0.0
+CourseCategory_Business,0.0,coefficient,0.0
+CourseCategory_Cybersecurity,0.0,coefficient,0.0
+CourseCategory_Data Science,0.0,coefficient,0.0
+CourseCategory_Design,0.0,coefficient,0.0
+CourseCategory_Digital Marketing,0.0,coefficient,0.0
+CourseCategory_Finance,0.0,coefficient,0.0
+CourseCategory_Machine Learning,0.0,coefficient,0.0
+CourseCategory_Marketing,0.0,coefficient,0.0
+CourseCategory_Programming,0.0,coefficient,0.0
+CourseCategory_Project Management,0.0,coefficient,0.0
+CourseCategory_Web Development,0.0,coefficient,0.0
+CourseType_Free,0.0,coefficient,0.0
+CourseType_Paid,0.0,coefficient,0.0
+CourseLevel_Advanced,0.0,coefficient,0.0
+CourseLevel_Beginner,0.0,coefficient,0.0
+CourseLevel_Intermediate,0.0,coefficient,0.0
+PriceBand_High,0.0,coefficient,0.0
+PriceBand_Low,0.0,coefficient,0.0
+PriceBand_Medium,0.0,coefficient,0.0
+DurationBucket_Extended,0.0,coefficient,0.0
+DurationBucket_Long,0.0,coefficient,0.0
+DurationBucket_Medium,0.0,coefficient,0.0
+DurationBucket_Short,0.0,coefficient,0.0
+RatingTier_Average,0.0,coefficient,0.0
+RatingTier_Excellent,0.0,coefficient,0.0
+RatingTier_Good,0.0,coefficient,0.0
+RatingTier_Poor,0.0,coefficient,0.0
+ExperienceBucket_Veteran,0.0,coefficient,0.0

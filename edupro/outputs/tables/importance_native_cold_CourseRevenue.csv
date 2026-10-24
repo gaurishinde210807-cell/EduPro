@@ -1,0 +1,46 @@
+Feature,Value,Kind,AbsValue
+PricePerHour,0.33936,impurity,0.33936
+PriceXRating,0.22233,impurity,0.22233
+CoursePrice,0.20666,impurity,0.20666
+IsFree,0.08184,impurity,0.08184
+CourseType_Paid,0.07873,impurity,0.07873
+CourseType_Free,0.05962,impurity,0.05962
+PriceBand_Low,0.00674,impurity,0.00674
+YearsOfExperience,0.0032,impurity,0.0032
+ExpertiseMatch,0.00033,impurity,0.00033
+CategoryMedianPrice,0.00029,impurity,0.00029
+TeacherRating,0.00028,impurity,0.00028
+CourseDuration,8e-05,impurity,8e-05
+PriceVsCategory,7e-05,impurity,7e-05
+CourseCategory_Finance,7e-05,impurity,7e-05
+CourseLevel_Beginner,6e-05,impurity,6e-05
+DurationBucket_Extended,6e-05,impurity,6e-05
+CourseCategory_Digital Marketing,5e-05,impurity,5e-05
+CourseRating,5e-05,impurity,5e-05
+LevelEncoded,5e-05,impurity,5e-05
+PriceBand_High,4e-05,impurity,4e-05
+RatingTier_Average,1e-05,impurity,1e-05
+RatingTier_Poor,1e-05,impurity,1e-05
+DurationBucket_Short,1e-05,impurity,1e-05
+CourseLevel_Advanced,1e-05,impurity,1e-05
+PriceBand_Medium,1e-05,impurity,1e-05
+DurationBucket_Medium,1e-05,impurity,1e-05
+CourseCategory_Project Management,1e-05,impurity,1e-05
+CourseCategory_Artificial Intelligence,1e-05,impurity,1e-05
+CourseCategory_Business,1e-05,impurity,1e-05
+RatingTier_Good,1e-05,impurity,1e-05
+TeacherPortfolioSize,0.0,impurity,0.0
+ExactExpertiseMatch,0.0,impurity,0.0
+CategoryCourseCount,0.0,impurity,0.0
+RatingMissing,0.0,impurity,0.0
+CourseCategory_Cybersecurity,0.0,impurity,0.0
+CourseCategory_Data Science,0.0,impurity,0.0
+CourseCategory_Design,0.0,impurity,0.0
+CourseCategory_Web Development,0.0,impurity,0.0
+CourseCategory_Programming,0.0,impurity,0.0
+CourseCategory_Machine Learning,0.0,impurity,0.0
+CourseCategory_Marketing,0.0,impurity,0.0
+CourseLevel_Intermediate,0.0,impurity,0.0
+DurationBucket_Long,0.0,impurity,0.0
+RatingTier_Excellent,0.0,impurity,0.0
+ExperienceBucket_Veteran,0.0,impurity,0.0

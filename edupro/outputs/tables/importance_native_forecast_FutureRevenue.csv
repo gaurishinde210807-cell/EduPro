@@ -1,0 +1,51 @@
+Feature,Value,Kind,AbsValue
+HistRevenue,3076.14485,coefficient,3076.14485
+CoursePrice,2894.41214,coefficient,2894.41214
+PriceXRating,-872.53028,coefficient,872.53028
+CategoryMedianPrice,605.13238,coefficient,605.13238
+CourseCategory_Digital Marketing,-520.37744,coefficient,520.37744
+PriceVsCategory,514.50227,coefficient,514.50227
+PriceBand_Medium,-483.99093,coefficient,483.99093
+PriceBand_High,336.46977,coefficient,336.46977
+RatingTier_Poor,307.0925,coefficient,307.0925
+CourseCategory_Marketing,271.76999,coefficient,271.76999
+RatingTier_Good,-271.44397,coefficient,271.44397
+CourseCategory_Project Management,248.45039,coefficient,248.45039
+TeacherRating,-189.78754,coefficient,189.78754
+CourseRating,188.76004,coefficient,188.76004
+CourseCategory_Business,-186.53275,coefficient,186.53275
+CourseCategory_Design,-173.74073,coefficient,173.74073
+CourseCategory_Artificial Intelligence,169.56054,coefficient,169.56054
+PricePerHour,-165.55552,coefficient,165.55552
+ExactExpertiseMatch,-157.60038,coefficient,157.60038
+PriceBand_Low,147.52117,coefficient,147.52117
+CourseCategory_Data Science,143.32397,coefficient,143.32397
+CourseCategory_Finance,136.99279,coefficient,136.99279
+RatingTier_Excellent,-132.57295,coefficient,132.57295
+CourseCategory_Web Development,-122.99535,coefficient,122.99535
+IsFree,-115.56989,coefficient,115.56989
+RatingTier_Average,96.92442,coefficient,96.92442
+LevelEncoded,-95.11153,coefficient,95.11153
+HistActiveMonths,-92.5977,coefficient,92.5977
+ExpertiseMatch,92.37849,coefficient,92.37849
+DurationBucket_Short,85.93564,coefficient,85.93564
+DurationBucket_Long,-74.54219,coefficient,74.54219
+DurationBucket_Extended,-73.57342,coefficient,73.57342
+DurationBucket_Medium,62.17997,coefficient,62.17997
+HistDaysSinceLastSale,-60.54113,coefficient,60.54113
+CourseCategory_Machine Learning,57.79692,coefficient,57.79692
+CourseType_Free,-52.52994,coefficient,52.52994
+CourseType_Paid,52.52994,coefficient,52.52994
+CourseLevel_Beginner,47.36756,coefficient,47.36756
+CourseCategory_Cybersecurity,-43.55844,coefficient,43.55844
+CourseLevel_Advanced,-32.58255,coefficient,32.58255
+CourseCategory_Programming,19.31011,coefficient,19.31011
+YearsOfExperience,-15.33407,coefficient,15.33407
+CourseLevel_Intermediate,-14.78501,coefficient,14.78501
+CourseDuration,-12.23478,coefficient,12.23478
+HistEnrollments,-1.68497,coefficient,1.68497
+CategoryCourseCount,0.0,coefficient,0.0
+RatingMissing,0.0,coefficient,0.0
+TeacherPortfolioSize,0.0,coefficient,0.0
+IsNewCourse,0.0,coefficient,0.0
+ExperienceBucket_Veteran,0.0,coefficient,0.0
